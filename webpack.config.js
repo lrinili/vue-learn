@@ -1,7 +1,7 @@
 var webpack=require("webpack");
 var path=require('path');
 module.exports={
-	entry:['./src/entry.js'],
+	entry:['./src/main.js'],
 	output:{
 		path:path.join(__dirname,'./dist'),
 		filename:"[name].js",
@@ -23,11 +23,7 @@ module.exports={
 
 		]
 	},
-	 vue: {
-        loaders: {
-              html:'html-loader'
-        }
-    },
+
         babel: {
         presets: ['es2015'],
         plugins: ['transform-runtime']

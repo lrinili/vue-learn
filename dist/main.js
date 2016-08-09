@@ -35,7 +35,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -52,13 +52,24 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue =__webpack_require__(2);
-	    new Vue({
-	        el: "body",
-	        data: {
-	            message: "hellsssssso vue.js"
-	        }
-	    });
+	'use strict';
+
+	var _vue = __webpack_require__(2);
+
+	var _vue2 = _interopRequireDefault(_vue);
+
+	var _app = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"app.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _app2 = _interopRequireDefault(_app);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	new _vue2.default({
+		el: 'body',
+		components: {
+			'app': _app2.default
+		}
+	});
 
 /***/ },
 /* 2 */
