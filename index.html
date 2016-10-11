@@ -4,98 +4,22 @@
 <head>
     <meta charset="utf-8">
     <style type="text/css">
-    .expand-transition {
-        transition: all 0.3s ease;
-        height: 20px;
-        width: 50px;
-        background: red;
-    }
-    
-    .expand-enter,
-    .expand-leave {
-        height: 0;
-        padding: 0 10px;
-        opacity: 0;
-    }
-    
-    .fade-transition {
-        transition: all .5s ease;
-        overflow: hidden;
-        margin: 0;
-        height: 20px;
-    }
-    
-    .fade-enter,
-    .fade-leave {
-        opacity: 0;
-        height: 0;
-    }
-    
-    .staggered-transition {
-        transition: all .5s ease;
-        overflow: hidden;
-        margin: 0;
-        height: 20px;
-    }
-    
-    .staggered-enter,
-    .staggered-leave {
-        opacity: 0;
-        height: 0;
-    }
+
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <!-- component template -->
 
-
 <body>
-     <div id='nav'>
-      <app></app> 
-     </div>
-    
-    <div id='test2'>
-        <a v-link="{path:'/test1'}">test1</a>
-        <a v-link="{path:'/test2'}">test2</a>
-        <router-view></router-view>
-    </div>
-    <!--  <div id="app">
-    
-    {{message}}
-
-
-    <div>---------------</div>
-    <div>
-      <input type="checkbox"  v-model="show">
-      {{show}}
-      <button v-show="show" transition="fade" >hello</button>
-      <input  type="text"  v-model="query">
-      <ul>
-                 <li v-for="item in list| filterBy query"
-            transition="staggered"
-            stagger="1000">
-          {{item.msg}}
-         </li>
-      </ul>
+    <!--  <button class="btn btn-info">button</button> -->
+    <app names="lly">
+        <h1>Hello Vue.js!</h1>
+    </app>
+    <h2>-------------下面是路由-----------</h2>
+    <div id='enter'>
 
     </div>
-   </div>
-    <div>----------------</div>
-    <div>
-
-    </di>
-
-    <div id="example">
-   <input v-model="input">
-  <my-component msg="这是组件1的参数"></my-component>
-  <my-component2 :my-msg="input"></my-component2>   
-
-</div>
-          <a href="#" v-link="{path:'/foo'}">path1</a>
-          <a href="#" v-link="{path:'/bar'}">path2</a>
-      <div id='router'>
-
-      </div> -->
-    <app></app>
+    
     <script src="./dist/main.js"></script>
     <!-- 注意这里引入的不是我们创建的文件，而是用webpack生成的文件 -->
 </body>
